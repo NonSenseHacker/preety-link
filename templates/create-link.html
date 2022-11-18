@@ -1,0 +1,79 @@
+{% extends 'base.html' %} {% block body %}
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<div class="alert alert-success" role="alert" style="display:none;" id="status">
+  <strong>Success:</strong> Link Created Successfully
+  </button>
+</div>
+<div class="container">
+    <br />
+    <center>
+        <h3>
+            Protect <i style="color: #ff9900" class="fa fa-lock"></i> Your Links
+        </h3>
+        <p>
+            <i style="color: green" class="fa fa-lock"></i> Protect your link in just
+            one click
+        </p>
+    </center>
+    <br />
+    <form action="/protected" method="post">
+        <div class="card p-2">
+            <br />
+
+            <center>
+                <b>Paste Link URLs</b><br />
+                Paste each link.<br />
+                <small><i>eg. http://example.com</i></small><br />
+                <font color="red"><b>Note.</b> You must include link name with every link. Link without
+                    it's name will be error! <br />
+                    Here you can put a link inside a box</font><br />
+                <input style="background: #ffffcc" rows="1" id="text-url" name="url1"
+                    class="form-control" placeholder="http://example.com" />
+
+                <input style="background: #ffffcc" rows="1" id="text-url" name="url2"
+                    class="form-control" placeholder="http://example2.com" />
+
+                <input style="background: #ffffcc" rows="1" id="text-url" name="url3"
+                    class="form-control" placeholder="http://example3.com" />
+
+                <input style="background: #ffffcc" rows="1" id="text-url" name="url4"
+                    class="form-control" placeholder="http://example4.com" />
+
+                <input style="background: #ffffcc" rows="1" id="text-url" name="url5"
+                    class="form-control" placeholder="http://example5.com" />
+                <br />
+                <center><b>File Name</b> (Required)</center>
+                <input style="background: rgba(85, 85, 85, 0.1)" id="text-url" name="ftitle" class="form-control"
+                    placeholder="Enter File Name (max 100 char.)" required /><br />
+                <center><b>File Size</b> (Required)</center>
+                <input style="background: rgba(85, 85, 85, 0.1)" id="text-url" type="number" name="fsize"
+                    class="form-control" placeholder="eg. 100" required/>
+            </center>
+            <br />
+            <hr />
+            <center><b>File Unit</b> (Required)</center>
+            <select class="form-control" aria-label="Default select example" style="background: rgba(85, 85, 85, 0.1)" id="text-url" name="funit">
+                <option value="MB">MB</option>
+                <option value="GB">GB</option>
+              </select>
+            <br />
+            <hr />
+        </div> <br>  <center> <button id="pro_btn" type="submit" name="generate" style="width: 180px" class="btn btn-success" onclick="send_data()">
+        <i class="fa fa-lock"></i>&nbsp;&nbsp;PROTECT LINKS
+    </button></center>
+    </form>
+</div>
+<hr />
+<center>
+
+    <br />
+    <br />
+    <p>
+        By uploading links to our site you agree to the 
+        <a href="/policy.php">Terms of use</a>
+    </p>
+</center>
+
+<br />
+
+{% endblock %}

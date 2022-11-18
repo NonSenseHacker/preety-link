@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{title}} | {{page}}</title>
+		<!-- meta tags-->
+		<meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="Make your link safe using Link Protector" />
+		<meta name="keywords" content="link, short, protector" />
+		<meta name="author" content="SAM" />
+                <meta name="theme-color" content="#2b506e"/>
+		<link rel="stylesheet" href="{{url_for('static', filename='css/bootstrap.min.css')}}" type="text/css" />
+		<link rel="stylesheet" href="{{url_for('static', filename='css/dash1.css')}}">
+                <link rel="stylesheet" href="{{url_for('static', filename='css/dash2.css')}}" type="text/css" />
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>      
+                
+            
+                <link rel="icon" href="{{url_for('static', filename='images/kFG1tU4uYFe9.png')}}" sizes="16x16" type="image/png">
+	</head>
+	<body class="bg-light">
+		<!-- Navigation -->
+<div class="navbar-filmy">
+    <div class="logo" align="center">
+          <a href="/">{{title}} | Fast Download</a>
+    </div>
+    <div class="userplus" align="center">
+          <a class="btnplus active" href="/create-link"><i class="fa fa-link"></i>&nbsp;Create Link</a>
+      <a class="btnplus " href="/links"><i class="fa fa-link"></i>&nbsp;Manage Links</a>
+	    <a class="btnplus" id="logout" href="javascript:void(0)" onclick="log_out()"><i class="fa fa-sign-out"></i>Logout</a>
+	    </div>
+</div>
+        {% block body %}{% endblock %}
+<div class="navbar-footer">
+            <center> &copy; 2022 {{title}}</center>
+            <div align="center">
+                  <a class="head-btn" href="/policy" style="text-decoration: none;">Privacy Policy</a>
+                  <a class="head-btn" href="/dmca" style="text-decoration: none;">DMCA</a>
+            </div>
+            </div>	
+                </body>
+<script>
+    $("#logout").click(function(){
+  $.ajax({url: "/logout", success: function(){
+    window.location.reload();
+  }});
+});
+</script>
+            </html>

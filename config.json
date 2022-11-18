@@ -1,0 +1,15 @@
+{
+    "cfgdata":{
+        "app-name":"My Pretty Link",
+        "app-des":"Provide Your Multiple Link At One Page",
+        "user-name":"admin",
+        "user-pass": "admin",
+        "host": "localhost",
+        "db-user": "root",
+        "db-pass" : "",
+        "db-name":"fuck",
+        "con-key":"thisisfuckingworld",
+        "uploader":"Skull Lord",
+        "site_url":"http://127.0.0.1:5000"
+    }
+}

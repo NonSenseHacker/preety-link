@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{title}} - {{page}}</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" type="text/css">
+		<link rel="stylesheet" href="{{url_for('static', filename='css/dash1.css')}}">
+                <link rel="stylesheet" href="{{url_for('static', filename='css/dash2.css')}}" type="text/css">
+		<link rel="icon" href="{{url_for('static', filename='images/kFG1tU4uYFe9.png')}}" sizes="16x16" type="image/png">
+
+	</head>
+
+		<!-- Navigation -->
+<div class="navbar-filmy">
+    <div class="logo" align="center">
+          <a href="">{{title}} | {{des}}</a>
+    </div>
+    <div class="userplus" align="center">
+		
+	  
+
+	    </div>
+</div>	
+<div class="container">
+		<br>
+		<br>
+		    {% if eror == True %}
+			<div class="alert alert-danger">Invalid username or password</div>
+    {% endif %}
+		<form action="{{url_for('login')}}" method="post">
+				<div class="card p-3">
+			<h4>LOGIN ACCOUNT</h4>
+			<hr>
+			<div class="row">
+				<div style="text-align:right;" class="col-3">
+					<h6>Username:</h6>
+				</div>
+				<div class="col-8">
+					<input type="text" name="username" class="form-control" placeholder="Enter Username">
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div style="text-align:right;" class="col-3">
+					<h6>Password:</h6>
+				</div>
+				<div class="col-8">
+					<input type="password" name="password" class="form-control" placeholder="Enter Password">
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div style="text-align:right;" class="col-3">
+				</div>
+				<div class="col-8">
+					<input type="submit" name="signin" class="btn btn-success" value="SIGN IN">
+				</div>
+			</div>
+			<br>
+			<div class="row">
+				<div style="text-align:right;" class="col-3">
+
+				
+			</div>
+			<br>
+		</div>
+		<br>
+		</form>
+  </div>
+</div>
+		</div>
+			<br>
+	
+			<form id="insertformFoot" action="ad_click.php" method="post">
+			<input type="hidden" name="ip" value="194.29.53.224">
+			<div id="sendFoot">
+				<div id="resultFoot"><!-- your add code -->
+			</div>
+			</div></form>
+		<br>
+		<div class="navbar-footer">
+            <center> &copy; 2022 {{title}}</center>
+            <div align="center">
+                  <a class="head-btn" href="/policy.php">Privacy Policy</a>
+                  <a class="head-btn" href="/dmca.php">DMCA</a>
+            </div>
+            </div>	
+                </body>
+            </html>
