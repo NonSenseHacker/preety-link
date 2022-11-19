@@ -16,7 +16,7 @@ Preety Link is a clone of <a href="https://b1.fileshub.cfd/">FilesHub</a> and <a
 
 # Setting And Customisation
 ### Site Configuration
-In [config.json](https://github.com/NonSenseHacker/preety-link/config.json) update Website name, Site description, Author name, Site secret key, Admin ID and Password. Don't forget to update database credentials.
+In [config.json](https://github.com/NonSenseHacker/preety-link/blob/main/config.json) update Website name, Site description, Author name, Site secret key, Admin ID and Password. Don't forget to update database credentials.
 
 ### Create Databse
 ```sql
